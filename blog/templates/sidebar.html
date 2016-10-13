@@ -1,0 +1,33 @@
+{% block sidebar %}
+
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+        <div class="sidebar-module sidebar-module-inset">
+            <h4 class = sidebar >About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+            <div class="post">
+                <h4 class = sidebar><br/> Tags <br/><br/></h4>
+                <ul>
+                {% for name, count in tag_list %}
+                    <li>
+                        <a href="{% url "tag" tag_id=name %}"> {{name}} ( {{ count }} )</a>
+                    </li>
+                {% endfor %}
+                </ul>
+
+                <h4 class = sidebar><br/>Category <br/> <br/></h4>
+                <ul>
+                {% for name, count in category_list %}
+                    <li>
+                        <a href="{% url "category" category_id=name %}"> {{name}} ( {{ count }} )</a>
+                    </li>
+                {% endfor %}
+                </ul>
+
+            </div>
+
+        </div>
+    </div><!-- /.blog-sidebar -->
+
+{% endblock %}
