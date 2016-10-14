@@ -1,0 +1,6 @@
+django==1.9.5
+django-markdown==0.8.4
+virtualenv==15.0.1
+wheel==0.29.0
+django-taggit==0.21.3
+django-taggit-templatetags2==1.5.3
